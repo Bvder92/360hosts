@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff; /* Fond blanc */
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    outline: none;
+    border: none;
+}
+
+.logo img {
+    width: 90px;
+}
+
+#main {
+    width: 100%;
+    height: 768px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./images/banner.jpg');
+    z-index: 0;
+}
+
+#main::before {
+    position: absolute;
+    content: "";
+    background: radial-gradient(ellipse at center, rgba(206, 255, 188, 0.38) 0%, rgba(0, 0, 0, 0.6) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    transition: 0.6s ease-in-out;
+}
+
+nav.active {
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
+    background-color: #ceffbc; /* Fond vert clair */
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    font-family: 'Lato';
+    height: 40px;
+    line-height: 43px;
+    margin: 3px;
+    padding: 0px 22px;
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000; /* Texte noir */
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover,
+.active {
+    background-color: #ceffbc; /* Vert clair */
+    color: #000;
+    box-shadow: 5px 10px 30px rgba(206, 255, 188, 0.4);
+}
+
+.name {
+    text-align: center;
+    font-family: 'Montserrat';
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+}
+
+.name span {
+    color: #ceffbc;
+}
+
+.name .details {
+    font-size: 23px;
+    color: #666666;
+}
+
+.name h2, .name h1 {
+    font-family: 'Lato';
+    letter-spacing: 2px;
+    color: #000; /* Texte noir */
+}
+
+.header-btns, .pr-btns {
+    display: flex;
+    margin: 40px auto;
+}
+
+.header-btn, .pr-btn {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: #ceffbc; /* Vert clair */
+    box-shadow: 5px 10px 30px rgba(206, 255, 188, 0.4);
+    border-radius: 5px;
+    color: #000; /* Texte noir */
+    font-family: 'Lato', sans-serif;
+}
+
+.header-btn:hover, .pr-btn:hover {
+    background-color: transparent;
+    transition: all ease 0.5s;
+    color: #000;
+    border: 2px solid #ceffbc;
+}
+
+#features {
+    width: 100%;
+    height: 120vh;
+    font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    background-color: #ffffff; /* Fond blanc */
+}
+
+#features h1 {
+    color: #000; /* Texte noir */
+    font-size: 3rem;
+}
+
+.a-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.a-box {
+    background-color: #ffffff; /* Fond blanc */
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    position: relative;
+}
+
+.a-box:hover {
+    border: 1px solid #ceffbc;
+    box-shadow: 2px 2px 12px rgba(206, 255, 188, 0.4);
+}
+
+.a-b-text {
+    width: 100%;
+    height: 40%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.a-b-text h2 {
+    color: #000; /* Texte noir */
+}
+
+.a-b-text p {
+    margin: 0px;
+    color: #666666; /* Gris pour contraste */
+    font-size: 1.1rem;
+    font-family: 'Lato';
+    display: block;
+    max-width: 80%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.reservation-platforms {
+    background-color: #ceffbc; /* Fond vert clair */
+    padding: 30px 0;
+    width: 100%;
+    color: #000; /* Texte noir */
+    text-align: center;
+}
+
+.reservation-platforms p {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.platform-logo {
+    width: 120px;
+}
+
+#presentation {
+    padding-top: 30px;
+    width: 100%;
+    height: 768px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/offer.jpg);
+    text-align: center;
+}
+
+.pr-heading span {
+    color: #ceffbc; /* Vert clair */
+}
+
+.pr-heading h1 {
+    font-family: 'Lato';
+    font-size: 4rem;
+    color: #000; /* Texte noir */
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    color: #ceffbc; /* Vert clair */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #666666; /* Gris pour contraste */
+}
+
+.about-text button {
+    background-color: #ceffbc; /* Vert clair */
+    color: #000;
+}
+
+.about-text button:hover {
+    box-shadow: 5px 10px 30px rgba(206, 255, 188, 0.4);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+
+#contact h1 {
+    color: #000; /* Texte noir */
+    font-size: 3rem;
+}
+
+#contact form input, #contact form textarea {
+    background-color: #ffffff;
+    color: #000; /* Texte noir */
+}
+
+#contact form input[type="submit"] {
+    background: #ceffbc;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Responsive styles omitted for brevity */
