@@ -1,7 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const navigateToDepartment = () => {
+    navigate("/department");
+  };
+
   return (
     <div id="main">
       <div className="name">
@@ -12,8 +18,8 @@ function Header() {
           jusqu'à votre retour chez vous.
         </p>
         <div className="header-btns">
-          <button className="header-btn">
-            <NavLink to="/selection-region">Estimez vos revenus</NavLink>
+          <button className="header-btn" onClick={navigateToDepartment}>
+            Estimez vos revenus
           </button>
         </div>
       </div>

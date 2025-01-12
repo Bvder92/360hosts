@@ -1,45 +1,51 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Pricing() {
+  const navigate = useNavigate();
+
+  const navigateToDepartment = () => {
+    navigate("/department");
+  };
   const services = [
     {
-      category: 'Onboarding',
+      category: "Onboarding",
       items: [
-        'Équipe de gestionnaire de compte dédiée',
-        'Vérification du logement en personne',
-        'Photographie professionnelle',
-        'Mise en place du tableau de bord du propriétaire',
+        "Équipe de gestionnaire de compte dédiée",
+        "Vérification du logement en personne",
+        "Photographie professionnelle",
+        "Mise en place du tableau de bord du propriétaire",
       ],
     },
     {
-      category: 'Gestion des annonces',
+      category: "Gestion des annonces",
       items: [
-        'Création et optimisation d’annonces',
-        'Gestion du calendrier',
-        'Tarification dynamique',
-        'Gestion des paiements',
+        "Création et optimisation d’annonces",
+        "Gestion du calendrier",
+        "Tarification dynamique",
+        "Gestion des paiements",
       ],
     },
     {
-      category: 'Services aux voyageurs',
+      category: "Services aux voyageurs",
       items: [
-        'Gestion et communication avec les voyageurs',
-        'Check-in assisté',
+        "Gestion et communication avec les voyageurs",
+        "Check-in assisté",
       ],
     },
     {
-      category: 'Services',
+      category: "Services",
       items: [
-        'Ménage professionnel',
-        'Literie et serviettes de qualité supérieure',
-        'Articles de toilette premium (supplément)',
-        'Gestion de l’entretien',
+        "Ménage professionnel",
+        "Literie et serviettes de qualité supérieure",
+        "Articles de toilette premium (supplément)",
+        "Gestion de l’entretien",
       ],
     },
     {
-      category: 'Sécurité',
+      category: "Sécurité",
       items: [
-        'Vérification de l’identité du client (carte d’identité et profil)',
+        "Vérification de l’identité du client (carte d’identité et profil)",
       ],
     },
   ];
@@ -55,16 +61,20 @@ function Pricing() {
               <p>des revenus locatifs générés</p>
             </div>
             <p className="tarification-details">
-              La commission dépend du profil de votre bien et de sa localisation.
-              Ce tarif inclut la gestion complète de votre propriété par notre équipe experte.
+              La commission dépend du profil de votre bien et de sa
+              localisation. Ce tarif inclut la gestion complète de votre
+              propriété par notre équipe experte.
             </p>
-            <button className="cta-button">Obtenez un devis</button>
+            <button className="cta-button" onClick={navigateToDepartment}>
+              Obtenez un devis
+            </button>
           </div>
         </div>
         <div className="intro">
           <h1>Nos Services Complets</h1>
           <p>
-            Découvrez l'ensemble des prestations que nous proposons pour une gestion optimale et sereine de votre bien locatif.
+            Découvrez l'ensemble des prestations que nous proposons pour une
+            gestion optimale et sereine de votre bien locatif.
           </p>
         </div>
         <div className="services-list">

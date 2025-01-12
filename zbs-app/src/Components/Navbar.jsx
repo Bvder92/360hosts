@@ -20,7 +20,7 @@ function Navbar() {
       <NavLink to="main" className="logo">
         <img src={logo} alt="" />
       </NavLink>
-      <imput className="menu-btn" type="checkbox" id="menu-btn" />
+      <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" for="menu-btn">
         <span className="nav-icon"></span>
       </label>
@@ -29,16 +29,16 @@ function Navbar() {
           <NavLink to="/main">Header</NavLink>
         </li> */}
         <li>
-          <NavLink to="/about">Notre activité</NavLink>
+          <a href="#about">Notre activité</a>
         </li>
         <li>
-          <NavLink to="/features">Nos Offres</NavLink>
+          <a href="#features">Nos Offres</a>
         </li>
         <li>
-          <NavLink to="/why-choose">ZSB agency</NavLink>
+          <a href="#why-choose">ZSB agency</a>
         </li>
         <li>
-          <NavLink to="/footer">A propos</NavLink>
+          <a href="#footer">A propos</a>
         </li>
       </ul>
     </nav>
