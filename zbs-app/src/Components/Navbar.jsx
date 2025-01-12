@@ -1,36 +1,45 @@
-import React, {useState} from 'react';
-import logo from '../images/logo.png';
-import {Link} from 'react-scroll';
+import React, { useState } from "react";
+import logo from "../images/logo.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
-
   const [nav, setnav] = useState(false);
 
-  const changeBackground = () =>{
-    if(window.scrollY >= 50){
+  const changeBackground = () => {
+    if (window.scrollY >= 50) {
       setnav(true);
-    }
-    else{
+    } else {
       setnav(false);
     }
-  }
-  window.addEventListener('scroll', changeBackground);
+  };
+
+  window.addEventListener("scroll", changeBackground);
 
   return (
-    <nav className={nav ? "nav active" : "nav"} >
-      <Link to='main' className='logo' smooth={true} duration={2000}>
-        <img src={logo} alt=''/>
-      </Link>
-      <imput className='menu-btn' type='checkbox' id='menu-btn'/>
-      <label className='menu-icon' for='menu-btn'>
-        <span className='nav-icon'></span>
+    <nav className={nav ? "nav active" : "nav"}>
+      <NavLink to="main" className="logo">
+        <img src={logo} alt="" />
+      </NavLink>
+      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <label className="menu-icon" for="menu-btn">
+        <span className="nav-icon"></span>
       </label>
-      <ul className='menu'>
-        <li><Link to="main" smooth={true} duration={1000}>Header</Link></li>
-        <li><Link to="about" smooth={true} duration={1000}>Notre activité</Link></li>
-        <li><Link to="features" smooth={true} duration={1000}>Nos Offres</Link></li>
-        <li><Link to="why-choose" smooth={true} duration={1000}>ZSB agency</Link></li>
-        <li><Link to="footer" smooth={true} duration={1000}>A propos</Link></li>
+      <ul className="menu">
+        {/* <li>
+          <NavLink to="/main">Header</NavLink>
+        </li> */}
+        <li>
+          <a href="#about">Notre activité</a>
+        </li>
+        <li>
+          <a href="#features">Nos Offres</a>
+        </li>
+        <li>
+          <a href="#why-choose">ZSB agency</a>
+        </li>
+        <li>
+          <a href="#footer">A propos</a>
+        </li>
       </ul>
     </nav>
   );
